@@ -1,0 +1,345 @@
+@import 'variables.scss';
+@import 'mixins.scss';
+
+body {
+  font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: black;
+  background-color: white;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  margin: 0 0 12px;
+  letter-spacing: 1px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+
+  @media(min-width: 768px) {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0 0 12px;
+  }
+}
+
+a {
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  color: #0000cd;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    color: darken($primary, 20%);
+  }
+}
+
+#mainNav {
+  font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid fade-out(white, .7);
+  background-color: black;
+
+  .navbar-toggler {
+    font-size: 14px;
+    padding: 11px;
+    color: white;
+    border: 1px solid white;
+  }
+
+  .navbar-brand {
+    font-weight: 700;
+  }
+
+  a {
+    color: white;
+  }
+
+  .navbar-nav {
+    .nav-item {
+      -webkit-transition: background 0.3s ease-in-out;
+      -moz-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        color: fade(white, 80%);
+        outline: none;
+        background-color: transparent;
+      }
+
+      &:active,
+      &:focus {
+        outline: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  @media(min-width:992px) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+    transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
+
+    letter-spacing: 1px;
+    border-bottom: none;
+    background: transparent;
+
+    &.navbar-shrink {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid fade-out(white, .7);
+      background: black;
+    }
+
+    .nav-link.active {
+      outline: none;
+      background-color: rgba(white, .3);
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+
+.masthead {
+  display: table;
+  width: 100%;
+  height: auto;
+  padding: 200px 0;
+  text-align: center;
+  color: white;
+  background: url('../img/intro-bg.jpg') no-repeat bottom center scroll;
+  background-color: black;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+  .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+
+    .brand-heading {
+      font-size: 45px;
+    }
+
+    .intro-text {
+      font-size: 15px;
+    }
+  }
+
+  @media(min-width:768px) {
+    height: 100%;
+    padding: 0;
+
+    .intro-body {
+      .brand-heading {
+        font-size: 75px;
+      }
+
+      .intro-text {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.btn-circle {
+  font-size: 26px;
+  width: 55px;
+  height: 55px;
+  margin-top: 15px;
+  line-height: 45px;
+
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background 0.3s ease-in-out;
+
+  color: white;
+  border: 2px solid white;
+  border-radius: 100% !important;
+  background: transparent;
+
+  &:focus,
+  &:hover {
+    color: white;
+    outline: none;
+    background: fade-out(white, .9);
+  }
+}
+
+#about{
+  .section-header{
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px #87ceeb solid;
+  }
+
+}
+
+#experience{
+  .section-header{
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px #87ceeb solid;
+  }
+
+  img{
+    margin-top: -60px;
+  }
+
+  h5{
+    color: #ff4500;
+    margin-bottom: 16px;
+  }
+
+  p{
+    font-size: 14px;
+    color: #0000cd;
+  }
+
+  .fa{
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .card{
+    height:320px;
+    &:hover{
+      background: #e0ffff;
+    }
+  }
+
+  .btn{
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+#skills{
+  .section-header{
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px #87ceeb solid;
+  }
+
+  .table{
+    th{
+      border-top: none;
+    }
+    ul{
+      padding-left: 16px;
+    }
+    li{
+      font-size: 16px;
+    }
+  }
+}
+
+#education{
+  .section-header{
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px #87ceeb solid;
+  }
+
+  img{
+    margin-top: -60px;
+  }
+
+  h3{
+    color: #ff4500;
+    margin-bottom: 18px;
+  }
+
+  p{
+    font-size: 14px;
+    color: #0000cd;
+  }
+
+  .fa{
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .card:hover{
+    background: #e0ffff;
+  }
+}
+
+#download{
+  .section-header{
+    width: 50%;
+    margin: auto;
+    border-bottom: 1px #87ceeb solid;
+  }
+
+  .fa{
+    font-size: 50px;
+    color: #000;
+    &:hover{
+      color:#87ceeb;
+    }
+  }
+}
+
+footer {
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  .fa{
+    font-size: 20px;
+    color: #000;
+    &:hover{
+      color: #fff;
+    }
+  }
+}
+
+::-moz-selection {
+  background: #fcfcfc;
+  background: fade-out(white, .8);
+  text-shadow: none;
+}
+
+::selection {
+  background: #fcfcfc;
+  background: fade-out(white, .8);
+  text-shadow: none;
+}
+
+img::selection {
+  background: transparent;
+}
+
+img::-moz-selection {
+  background: transparent;
+}
